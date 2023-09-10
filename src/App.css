@@ -1,0 +1,278 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width:0; /* Width of the scrollbar (optional) */
+  background-color: transparent; /* Background color behind the scrollbar (optional) */
+}
+
+.font_roboto{
+  font-family: 'Roboto', sans-serif;
+}
+
+.admin_dashboard{
+  position: fixed;
+  width: 20%;
+  top: 0;
+  left: 0;
+  border: solid 1px;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #333545;
+  padding: 40px 20px;
+}
+
+.outer_box{
+  width: 80%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: solid 1px;
+  height: 100vh;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  padding: 50px 40px;
+}
+
+/* Start of Side Bar Section */
+
+.sidebar_heading{
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 16px;
+  border-radius: 8px;
+  transition: all 400ms;
+}
+
+.sidebar_heading_active{
+  background-color: #f84464;
+}
+
+.sidebar_heading:hover{
+  background-color: #f84464;
+}
+
+.logo{
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.add_button{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #f84464;
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  transition: all 500ms;
+}
+
+.add_button:hover{
+  background-color: #b72136;
+}
+
+/* End of Side Bar Section */
+
+.page_head{
+  color: #212b36;
+  font-size: 32px;
+}
+
+/* Start of Home Page */
+
+.home_card_outer_div{
+  padding: 50px 80px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.home_card_div{
+  border-radius: 10px;
+  margin-bottom: 28px;
+  padding: 40px 10px;
+  transition: all 500ms;
+}
+
+.home_card_head{
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+.home_card_description{
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.home_card_icon_div{
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  border: solid 1px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_card_div:hover{
+  transform: scale(1.1, 1.1);
+}
+
+.home_icon{
+  font-size: 24px;
+}
+
+/* End of Home Page */
+
+/* Start of User Page */
+
+.user_outer_div{
+  width: 100%;
+  border: solid 1px #c0c9ce;
+  border-top: none;
+  padding: 16px 24px;
+}
+
+.user_info{
+  color: #111927;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.user_username{
+  text-align: start;
+}
+
+.user_outer_div_head{
+  background-color: #333545;
+}
+
+.user_head{
+  color: #ffffff;
+  margin: 8px 0;
+}
+
+.active_user{
+  color: #229a16;
+  background-color: #54d62c29;
+}
+
+.user_status{
+  font-size: 16px;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.inactive_user{
+  color: #b72136;
+  background-color: #ff484229;
+}
+
+/* End of User Page */
+
+/* Start of Category Section */
+
+.category_outer_card_div{
+  width: 70%;
+  margin: auto;
+}
+
+.category_card_div{
+  width: 100%;
+  box-shadow: 0px 0px 16px #919eaba2;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.category_card_image_div{
+  width: 100%;
+  height: 320px;
+}
+
+.category_name{
+  font-size: 22px;
+  color: #222222;
+  line-height: 30px;
+}
+
+.category_description{
+  font-size: 16px;
+  color: #969696;
+}
+
+.form_outer_div{
+  width: 50%;
+  margin: auto;
+}
+
+.add_label{
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #222222;
+}
+
+.add_input{
+  width: 100%;
+  margin-bottom: 20px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: solid 1px #333545;
+  outline: none;
+  background-color: #f5f5f5;
+}
+
+.form_button_div{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_filled{
+  color: #ffffff;
+  background-color: #f84464;
+  border: solid 1px #f84464;
+  border-radius: 5px;
+  padding: 6px 14px;
+  font-size: 16px;
+}
+
+.add_image_div{
+  width: 50%;
+  margin: auto;
+}
+
+/* End of Category Section */
+
+/* Start of Sub-Category Section */
+
+.subcategory_card_div{
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 8px;
+  border: solid 1px;
+  height: 280px;
+}
+
+.subcategory_subname{
+  color: #222222;
+  font-size: 18px;
+}
+
+/* End of Sub-Category Section */
