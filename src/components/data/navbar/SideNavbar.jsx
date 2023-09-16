@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie'
+
 
 const SideNavbar = () => {
     const [heading, setHeading] = useState(1)
+    const navigate = useNavigate()
     return (
         <>
             <div className='admin_dashboard font_roboto'>
@@ -18,7 +21,7 @@ const SideNavbar = () => {
 
                     <NavLink className={heading === 5 ? 'sidebar_heading sidebar_heading_active' : 'sidebar_heading'} to={`/event-list`} onClick={() => setHeading(5)}><i className="bi bi-display me-2"></i>Event List</NavLink>
 
-                    <div className="sidebar_heading" onClick={() => console.log('logout')}><i className="bi bi-box-arrow-left me-2"></i>Logout</div>
+                    <div className="sidebar_heading" onClick={() => { Cookies.remove('bookMySeatAdminToken'); Cookies.remove('bookMySeatAdminUser'); navigate('/login') }}><i className="bi bi-box-arrow-left me-2"></i>Logout</div>
                 </div>
             </div>
         </>

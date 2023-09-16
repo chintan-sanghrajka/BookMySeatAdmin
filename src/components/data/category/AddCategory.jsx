@@ -20,8 +20,12 @@ const AddCategory = () => {
     }
 
     const uploadPicHandler = () => {
-        const img = URL.createObjectURL(imageRef.current.files[0])
-        setCoverUrl(img)
+        const selectedFile = imageRef.current.files[0];
+
+        if (selectedFile) {
+            const img = URL.createObjectURL(selectedFile);
+            setCoverUrl(img);
+        }
     }
 
     const addCategoryHandler = () => {
@@ -29,7 +33,6 @@ const AddCategory = () => {
         formData.append('categoryImage', imageRef.current.files[0]);
         formData.append('name', data.name)
         formData.append('description', data.description)
-        console.log(formData)
         axios.post(`${BASE_URL}add-category`, formData).then((res) => {
             Cookies.remove('category')
             navigate('/category-list')
@@ -42,7 +45,6 @@ const AddCategory = () => {
         formData.append('name', data.name)
         formData.append('description', data.description)
         formData.append('_id', oldCategory._id)
-        console.log(formData)
         axios.put(`${BASE_URL}update-category`, formData).then((res) => {
             Cookies.remove('category')
             navigate('/category-list')

@@ -3,6 +3,7 @@ import homeReducer from "./home/homeSlice.js";
 import userReducer from "./user/userSlice.js";
 import categoryReducer from "./category/categorySlice.js";
 import subCategoryReducer from "./subcategory/subcategorySlice.js";
+import eventReducer from "./event/eventSlice.js";
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
     user: userReducer,
     category: categoryReducer,
     subCategory: subCategoryReducer,
+    event: eventReducer,
   },
 });
 

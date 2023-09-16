@@ -7,7 +7,6 @@ export const getHomeData = createAsyncThunk(
   async (args, { rejectWithValue }) => {
     try {
       const res = await axios.get(`${BASE_URL}get-home-data`);
-      // console.log(res.data.activeUsersCount);
       return res.data;
     } catch (error) {
       return rejectWithValue(error);

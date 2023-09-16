@@ -15,7 +15,7 @@ const SubCategoryList = () => {
         dispatch(getAllCategories())
     }, [])
 
-    const categoryList = useSelector(state => state.category.categoryList)
+    // const categoryList = useSelector(state => state.category.categoryList)
     const subCategoryList = useSelector(state => state.subCategory.subCategoryList)
 
     return (

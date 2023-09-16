@@ -14,7 +14,7 @@ const PrivateRoute = () => {
                         <Outlet />
                         <SideNavbar />
                     </>
-                    : <Navigate to='/home' />
+                    : <Navigate to='/login' />
             }
         </>
     )

@@ -7,11 +7,13 @@ import HomePage from "./components/data/home/HomePage.jsx";
 import UserList from "./components/data/user/UserList.jsx";
 import CategoryList from "./components/data/category/CategoryList.jsx";
 import SubCategoryList from "./components/data/subcategory/SubCategoryList.jsx";
-import EventList from "./components/data/EventList.jsx";
+import EventList from "./components/data/event/EventList.jsx";
 import axios from "axios";
 import Cookies from "js-cookie";
 import AddCategory from "./components/data/category/AddCategory.jsx";
-import AddSubCategory from "./components/data/subcategory/AddSubCategory";
+import AddSubCategory from "./components/data/subcategory/AddSubCategory.jsx";
+import AddEvent from "./components/data/event/AddEvent.jsx";
+import Login from "./components/user/Login.jsx";
 
 function App() {
   axios.interceptors.request.use((request) => {
@@ -32,8 +34,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<PrivateRoute />}></Route>
-          <Route path="/" element={<PublicRoute />}>
+          <Route path="/" element={<PrivateRoute />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/user-list" element={<UserList />} />
@@ -45,6 +46,10 @@ function App() {
               path="add-sub-category/:action"
               element={<AddSubCategory />}
             />
+            <Route path="add-event/:action" element={<AddEvent />} />
+          </Route>
+          <Route path="/" element={<PublicRoute />}>
+            <Route path="/login" element={<Login />} />
           </Route>
         </Routes>
       </Router>
